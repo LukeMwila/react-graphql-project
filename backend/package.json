@@ -4,7 +4,8 @@
   "description": "Backend for angular-grapql project",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "babel-watch server.js"
   },
   "author": "Luke Mwila",
   "license": "ISC",
@@ -12,5 +13,11 @@
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "babel-watch": "^2.0.7"
+  },
+  "dependencies": {
+    "apollo-server-express": "^1.3.2",
+    "express": "^4.16.3",
+    "graphql": "^0.13.2",
+    "graphql-tools": "^2.23.1"
   }
 }
