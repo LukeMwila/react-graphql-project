@@ -33,20 +33,23 @@ const resolvers = {
         allCourses: (root, {searchTerm}) => {
             return coursesData
         },
-        course: (root,{id}) => {
-            return courseModel.findOne({id: id})
+        course: (root, {id}) => {
+            return coursesData.filter(course => {
+                return course.id === id
+            })[0]
+            /* return courseModel.findOne({id: id}) */
         }
     },
     Mutation: {
         upvote: (root, {id}) => {
-            const course = courseDta.filter(course => {
+            const course = coursesData.filter(course => {
                 return course.id === id
             })[0]
             course.voteCount++
             return course
         },
         downvote: (root, {id}) => {
-            const course = courseDta.filter(course => {
+            const course = coursesData.filter(course => {
                 return course.id === id
             })[0]
             course.voteCount--
