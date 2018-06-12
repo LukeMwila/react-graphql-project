@@ -13,9 +13,7 @@ app.use(cors())
 /**
  * Connection String to MongoDB
  */
-mongoose.connect(
-  'mongodb://graph_admin_91:QuinAuto212!@graphql-api-cluster-shard-00-00-ggaf3.mongodb.net:27017,graphql-api-cluster-shard-00-01-ggaf3.mongodb.net:27017,graphql-api-cluster-shard-00-02-ggaf3.mongodb.net:27017/test?ssl=true&replicaSet=graphql-api-cluster-shard-0&authSource=admin&retryWrites=true'
-)
+mongoose.connect('Connection string goes here')
 
 const connection = mongoose.connection
 
