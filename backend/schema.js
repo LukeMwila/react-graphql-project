@@ -16,7 +16,7 @@ const typeDefs = [`
         course(id: String!): Course
     }
     type Mutation {
-        addCourse(title: String!, author: String!, desription:String, topic: String!, url: String): Course
+        addCourse(title: String!, author: String!, description:String, topic: String!, url: String): Course
         upvote(id: String!): Course
         downvote(id: String!): Course
     }

@@ -13,7 +13,9 @@ app.use(cors())
 /**
  * Connection String to MongoDB
  */
-mongoose.connect('Connection string goes here')
+mongoose.connect(
+    'CONNECTION_STRING_GOES_HERE'
+)
 
 const connection = mongoose.connection
 

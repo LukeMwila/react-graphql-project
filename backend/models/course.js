@@ -1,8 +1,8 @@
 import mongoose from 'mongoose'
+import uuid from 'uuid'
 
-const Schema = mongoose.Schema
-const courseSchema = new Schema({
-    id: String,
+const courseSchema = new mongoose.Schema({
+    id: { type: String, default: uuid.v1 },
     title: String,
     author: String,
     description: String,
@@ -11,7 +11,7 @@ const courseSchema = new Schema({
     voteCount: { type: Number, default: 0 }
 })
 
-courseSchema.index({'$**': 'text'})
+// courseSchema.index({'$**': 'text'})
 
 const model = mongoose.model('course', courseSchema)
 export default model
